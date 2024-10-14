@@ -39,7 +39,7 @@
   & .temp {
     font-size: 8.5rem;
     font-weight: bolder;
-    background: url("../../../public/images/bgm.jpg") no-repeat;
+    background: url("../../../public/images/bgM.jpg");
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
