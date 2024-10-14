@@ -50,11 +50,11 @@ main::before {
 
 @media (max-width: 1024px) {
   main::before {
-    background-image: url(../public/images/bgm.jpg);
+    background-image: url(../public/images/bgM.jpg);
   }
 
   .content {
-    background-image: url(../public/images/bgm.jpg);
+    background-image: url(../public/images/bgM.jpg);
     background-size: cover;
     width: 85%;
     height: 90vh;
