@@ -1,0 +1,49 @@
+.time {
+  display: flex;
+  justify-content: space-between;
+  color: gold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+
+  & .day-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & .current-day {
+      font-size: 2rem;
+    }
+  }
+
+  & .hour {
+    color: orange;
+  }
+}
+
+@media (max-width: 991px) {
+  .time {
+    & .day-name {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & .current-day {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .time {
+    & .day-name {
+      & .current-day {
+        font-size: 1rem;
+      }
+    }
+
+    & .hour {
+      font-size: 1rem;
+    }
+  }
+}
