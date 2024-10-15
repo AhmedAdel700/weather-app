@@ -37,7 +37,7 @@ main::before {
 .content {
   position: relative; /* Ensure the content is not affected by the blur */
   width: 80%;
-  height: 80vh;
+  height: 85vh;
   margin: auto;
   padding: 7px 20px 20px;
   background-image: url(../public/images/bg1.jpg);
@@ -46,6 +46,29 @@ main::before {
   border-radius: 20px;
   z-index: 2; /* Keep the content on top */
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.message {
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 4rem;
+  background-image: linear-gradient(to right, #ffd700, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1300px) {
+  .content {
+    min-height: fit-content;
+    margin: 2rem 0;
+  }
+
+  .message {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -57,7 +80,6 @@ main::before {
     background-image: url(../public/images/bgM.jpg);
     background-size: cover;
     width: 85%;
-    height: 90vh;
   }
 }
 
@@ -65,5 +87,24 @@ main::before {
   .content {
     min-height: fit-content;
     margin: 2rem auto;
+  }
+
+  .message {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .message {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
   }
 }

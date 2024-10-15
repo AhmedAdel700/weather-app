@@ -1,12 +1,22 @@
 import Search from "./components/search/Search";
 import CurrentWeather from "./components/current-weather/CurrentWeather";
 import Time from "./components/time/Time";
+import { useEffect, useState } from "react";
+import Forecast from "./components/forecast/Forecast";
+import AOS from "aos/";
+import "aos/dist/aos.css";
 import "./App.css";
-import { useState } from "react";
 
 export default function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
@@ -43,7 +53,11 @@ export default function App() {
       <section className="content">
         <Search onSearchChange={handleOnSearchChange} />
         <Time />
+
+        {!currentWeather && <h1 className="message">Please Enter A City Name First !</h1>}
+
         {currentWeather && <CurrentWeather currentWeather={currentWeather} />}
+        {forecast && <Forecast data={forecast.list} />}
       </section>
     </main>
   );

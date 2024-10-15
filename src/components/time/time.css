@@ -1,9 +1,14 @@
 .time {
   display: flex;
   justify-content: space-between;
-  color: gold;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   padding: 0.5rem;
+
+  & .current-day {
+    background-image: linear-gradient(to right, #ffd700, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   & .day-name {
     display: flex;
@@ -16,7 +21,9 @@
   }
 
   & .hour {
-    color: orange;
+    background-image: linear-gradient(to right, #ffd700, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

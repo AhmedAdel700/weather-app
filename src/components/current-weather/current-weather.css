@@ -116,13 +116,22 @@
 
   .current-weather .city-info {
     margin-bottom: 0rem;
+    padding: 0 0 0 0.5rem;
 
     & .city-name {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
   }
 
   .weather-condition {
     font-size: 0.7rem;
+  }
+
+  .weather-icon {
+    width: 90px;
+
+    & img {
+      width: 100%;
+    }
   }
 }

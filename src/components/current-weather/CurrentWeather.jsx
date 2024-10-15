@@ -1,9 +1,8 @@
-import { WiDaySunny } from "weather-icons-react";
 import "./current-weather.css";
 
 export default function CurrentWeather({ currentWeather }) {
   return (
-    <section className="current-weather">
+    <section className="current-weather" data-aos="fade-right">
       <div className="city-info">
         <div>
           <h1 className="city-name">{currentWeather.city}</h1>
@@ -14,7 +13,7 @@ export default function CurrentWeather({ currentWeather }) {
           </h3>
         </div>
 
-        <div>
+        <div className="weather-icon">
           <img
             className={
               `${currentWeather.weather[0].icon}.png` === `01d.png` ||

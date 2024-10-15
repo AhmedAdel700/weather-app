@@ -37,7 +37,7 @@ export default function Time() {
   }, []);
 
   return (
-    <section className="time">
+    <section className="time" data-aos="fade-right">
       <div className="day-name">
         <h2 className="current-day">
           {currentDayName} <br /> {currentDate}
